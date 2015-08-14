@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
 <head profile="http://gmpg.org/xfn/11">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><%= h(page_title) %></title>
+  <title ><%= h(page_title) %></title>
   <%= stylesheet_link_tag "/stylesheets/theme/bootstrap.min.css", "/stylesheets/theme/style.css", "/stylesheets/user-style.css", :media => 'all' %>
   <%= render 'shared/page_header' %>
   <style type="text/css">
@@ -34,6 +34,7 @@
             <dic class='span1'></dic>
             <ul class='nav'>
               <li><%= link_to(t('.Home'), this_blog.base_url)%></li>
+              <li><%= link_to(t('.My Github'), "https://github.com/Leolusir?tab=repositories")%></li>
               <%- Page.published.each do |page| %>
                 <li><%= link_to_permalink(page, page.title) %></li>
             <%- end %>
@@ -48,9 +49,9 @@
           <div class='span7'>
             <%= yield %>
           </div>
-
         </div>
       </div>
+
     </div>
   </div>
 </body>
